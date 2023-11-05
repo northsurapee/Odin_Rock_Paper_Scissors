@@ -5,6 +5,7 @@ let playerScore = 0
 let computerScore = 0
 let roundWinner = ''
 
+/* get roundWinner and update score */
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         roundWinner = "tie"
@@ -71,12 +72,12 @@ function handleClick(playerSelection) {
     // game logic
     const computerSelection = getRandomChoice()
     playRound(playerSelection, computerSelection)
-    // update UI
+    // update UI according to game logic
     updateScoreInfo()
     updateScoreMessage(roundWinner, playerSelection, computerSelection)
     updateChoices(playerSelection, computerSelection)
     updateCurrentScore()
-    
+    // Is game end ?
     if (isGameOver()) {
         openEndgameModal()
         setFinalMessage()
