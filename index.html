@@ -19,27 +19,27 @@
     </header>
     <main class="main">
         <div class="score-board">
-            <h2 class="score-info">Choose your weapon</h2>
-            <h3 class="score-message">First to score 5 points wins the game</h3>
+            <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+            <h3 class="score-message" id="scoreMessage">First to score 5 points wins the game</h3>
             <div class="score-container">
                 <div class="score-box">
-                    <div class="sign" id="player-sign">?</div>
-                    <div class="score" id="player-score">Player: 0</div>
+                    <div class="sign" id="playerSign">?</div>
+                    <div class="score" id="playerScore">Player: 0</div>
                 </div>
                 <div class="score-box">
-                    <div class="sign" id="computer-sign">?</div>
-                    <div class="score" id="computer-score">Computer: 0</div>
+                    <div class="sign" id="computerSign">?</div>
+                    <div class="score" id="computerScore">Computer: 0</div>
                 </div>
             </div>
         </div>
         <div class="buttons">
-            <button class="btn btn-square" id="rock">
+            <button class="btn btn-square" id="rockBtn">
                 <div class="sign">✊</div>
             </button>
-            <button class="btn btn-square" id="paper">
+            <button class="btn btn-square" id="paperBtn">
                 <div class="sign">🤚</div>
             </button>
-            <button class="btn btn-square" id="scissors">
+            <button class="btn btn-square" id="scissorsBtn">
                 <div class="sign">✌️</div>
             </button>
         </div>
@@ -49,6 +49,6 @@
         <button class="btn btn-restart" id="restartBtn">Play again</button>
     </div>
     <div class="overlay" id="overlay"></div>
-    <!-- <script src="script.js" defer></script> -->
+    <script src="script.js" defer></script>
 </body>
 </html>

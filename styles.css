@@ -15,14 +15,24 @@ body {
   background-color: var(--primary-dark);
   color: var(--primary-light);
   font-family: "Roboto", sans-serif;
+  line-height: 1; /* ช่วงให้ line นิ่งขึ้น แบบไม่ขึ้นกับ font หรือ emoji */
+}
+
+button { 
+  border: none;
+  color: inherit; /* from body */
+  font-family: inherit; /* from body */
+  font-size: inherit; /* from modal */
+  cursor: pointer;
+  outline: none;
 }
 
 /* HEADER */
-
 header {
   display: flex;
   justify-content: center;
   background-color: var(--header);
+  padding: 20px;
 }
 
 .title {
@@ -32,8 +42,8 @@ header {
 }
 
 /* MAIN */
-
 .main {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,16 +57,21 @@ header {
 
 .score-info {
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .score-message {
   font-size: 20px;
+  margin-top: 0px;
 }
 
 .score-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
 }
 
 .score-box {
@@ -83,8 +98,6 @@ header {
 }
 
 .btn {
-  cursor: pointer;
-  border: none;
   border-radius: 10px;
   background-color: var(--secondary-dark);
 }
@@ -106,19 +119,16 @@ pesudo-classes are used to define special states that an element can be in!*/
 
 /* MODALS */
 /* Don't under stand shit */
-
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 1; /*?*/
   top: 50%;
   left: 50%;
-  width: 300px;
-  padding: 30px;
+  padding: 20px 50px;
   border-radius: 10px;
   background-color: var(--primary-dark);
   text-align: center;
-  font-size: 30px;
-  user-select: none;
+  font-size: 30px; /* pass to btn-restart too */
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
 }
